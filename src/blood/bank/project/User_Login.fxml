@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blood.bank.project.User_LoginController">
+    <children>
+      <AnchorPane prefHeight="900.0" prefWidth="305.0" style="-fx-background-color: #c40001;">
+         <children>
+            <Label layoutX="48.0" layoutY="270.0" prefHeight="42.0" prefWidth="209.0" text="WELCOME BACK" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="312.0" prefHeight="106.0" prefWidth="209.0" text="&quot;Blessed are the young who can give back life with their blood&quot;" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="128.0" fitWidth="121.0" layoutX="92.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/icons8-hypertension-80.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="UserLogout" layoutX="56.0" layoutY="450.0" mnemonicParsing="false" onAction="#UserLogout" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: white;" text="LOGOUT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startY="0.14285714285714285">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#c32148" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <TabPane layoutX="305.0" layoutY="300.0" prefHeight="602.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Donate Blood">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="D_name" layoutX="389.0" layoutY="48.0" prefHeight="42.0" prefWidth="593.0" promptText="Donor's name" />
+                        <TextField fx:id="D_phone" layoutX="389.0" layoutY="116.0" prefHeight="42.0" prefWidth="237.0" promptText="phone number" />
+                        <TextField fx:id="D_address" layoutX="389.0" layoutY="179.0" prefHeight="42.0" prefWidth="593.0" promptText="Address" />
+                        <CheckBox fx:id="disease1" layoutX="389.0" layoutY="328.0" mnemonicParsing="false" onAction="#d_1" prefHeight="25.0" prefWidth="244.0" text="Hepatitis" />
+                        <CheckBox fx:id="disease6" layoutX="697.0" layoutY="429.0" mnemonicParsing="false" onAction="#d_6" prefHeight="25.0" prefWidth="244.0" text="Taking medicine" />
+                        <CheckBox fx:id="disease5" layoutX="389.0" layoutY="429.0" mnemonicParsing="false" onAction="#d_5" prefHeight="25.0" prefWidth="244.0" text="Bleeding disorder" />
+                        <CheckBox fx:id="disease3" layoutX="389.0" layoutY="378.0" mnemonicParsing="false" onAction="#d_3" prefHeight="25.0" prefWidth="244.0" text="Chest disease/ Cardiac problem" />
+                        <CheckBox fx:id="disease4" layoutX="697.0" layoutY="378.0" mnemonicParsing="false" onAction="#d_4" prefHeight="25.0" prefWidth="244.0" text="Blood transfusion in last 6 months" />
+                        <CheckBox fx:id="disease2" layoutX="697.0" layoutY="328.0" mnemonicParsing="false" onAction="#d_2" prefHeight="25.0" prefWidth="244.0" text="Diabetese/Hyper tensive" />
+                        <Button fx:id="Donor_requestbtn" layoutX="395.0" layoutY="481.0" mnemonicParsing="false" onAction="#Donor_request" prefHeight="49.0" prefWidth="581.0" style="-fx-background-color: #c40001;" text="Send Request to donate" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="D_age" layoutX="697.0" layoutY="238.0" prefHeight="35.0" prefWidth="105.0" promptText="Age" />
+                        <TextField fx:id="D_weight" layoutX="878.0" layoutY="238.0" prefHeight="35.0" prefWidth="104.0" promptText="Weight" />
+                        <Label layoutX="389.0" layoutY="243.0" prefHeight="27.0" prefWidth="84.0" text="Gender" />
+                        <RadioButton fx:id="D_male" layoutX="452.0" layoutY="248.0" mnemonicParsing="false" onAction="#gendar" selected="true" text="Male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Gender" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="D_female" layoutX="511.0" layoutY="248.0" mnemonicParsing="false" onAction="#gendar" text="Female" toggleGroup="$Gender" />
+                        <ImageView fitHeight="206.0" fitWidth="231.0" layoutX="82.0" layoutY="118.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../images/blood-donation%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="D_Blood" layoutX="745.0" layoutY="116.0" prefHeight="42.0" prefWidth="237.0" promptText="Blood group" />
+                        <Label layoutX="389.0" layoutY="287.0" prefHeight="35.0" prefWidth="338.0" text="Ever had  disease in a given below diseases?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Request for blood">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="R_Name" layoutX="407.0" layoutY="47.0" prefHeight="42.0" prefWidth="593.0" promptText="Full name" />
+                        <TextField fx:id="R_phone" layoutX="407.0" layoutY="118.0" prefHeight="42.0" prefWidth="251.0" promptText="Phone number" />
+                        <TextField fx:id="R_address" layoutX="407.0" layoutY="189.0" prefHeight="42.0" prefWidth="593.0" promptText="Address" />
+                        <TextField fx:id="R_hospital" layoutX="407.0" layoutY="364.0" prefHeight="42.0" prefWidth="593.0" promptText="Referring hospital" />
+                        <TextField fx:id="R_diagnosis" layoutX="407.0" layoutY="297.0" prefHeight="42.0" prefWidth="593.0" promptText="Diagnosis" />
+                        <RadioButton fx:id="R_female" layoutX="584.0" layoutY="256.0" mnemonicParsing="false" onAction="#gender" text="Female">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Gendar" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="R_male" layoutX="514.0" layoutY="256.0" mnemonicParsing="false" onAction="#gender" text="Male" toggleGroup="$Gendar" />
+                        <Label layoutX="407.0" layoutY="251.0" prefHeight="27.0" prefWidth="84.0" text="Gender" />
+                        <TextField fx:id="R_age" layoutX="827.0" layoutY="247.0" prefHeight="35.0" prefWidth="166.0" promptText="Age" />
+                        <TextField fx:id="R_blood" layoutX="749.0" layoutY="118.0" prefHeight="42.0" prefWidth="251.0" promptText="Blood group" />
+                        <Button fx:id="R_send_request" layoutX="407.0" layoutY="436.0" mnemonicParsing="false" onAction="#Send_Request" prefHeight="49.0" prefWidth="586.0" style="-fx-background-color: #c40001;" text="Send Request for blood" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ImageView fitHeight="220.0" fitWidth="267.0" layoutX="68.0" layoutY="108.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../images/blood-donation.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="300.0" fitWidth="1300.0" layoutX="305.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../images/cover-image-2-4.jpg" />
+         </image>
+      </ImageView>
+   </children>
+    
+</AnchorPane>
