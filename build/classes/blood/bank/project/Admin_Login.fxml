@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blood.bank.project.Admin_LoginController">
+    <children>
+      <AnchorPane layoutX="323.0" prefHeight="1191.0" prefWidth="1698.0">
+         <children>
+            <TabPane layoutX="36.0" layoutY="318.0" prefHeight="900.0" prefWidth="1663.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Dash board">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="241.0" layoutX="130.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" width="381.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#c40001" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="241.0" layoutX="613.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" width="381.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#c40001" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Label fx:id="donors" layoutX="239.0" layoutY="181.0" prefHeight="81.0" prefWidth="181.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="53.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="230.0" layoutY="265.0" prefHeight="49.0" prefWidth="190.0" text="Total Donors">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="32.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="recipients" layoutX="735.0" layoutY="174.0" prefHeight="88.0" prefWidth="184.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="53.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="710.0" layoutY="262.0" prefHeight="54.0" prefWidth="234.0" text="Total Recipients">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Requests to donate">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutX="58.0" layoutY="56.0" prefHeight="411.0" prefViewportHeight="570.0" prefViewportWidth="1141.0" prefWidth="1117.0">
+                                 <content>
+                                    <TableView fx:id="D_table" layoutX="60.0" layoutY="60.0" prefHeight="398.0" prefWidth="1116.0">
+                                       <columns>
+                                          <TableColumn fx:id="D_Name" prefWidth="123.0" text="Name" />
+                                          <TableColumn fx:id="D_phone" prefWidth="109.0" text="Phone" />
+                                          <TableColumn fx:id="D_blood" prefWidth="133.0" text="Blood Group" />
+                                          <TableColumn fx:id="D_address" prefWidth="164.0" text="Address" />
+                                          <TableColumn fx:id="D_gender" prefWidth="169.0" text="Gender" />
+                                          <TableColumn fx:id="D_age" prefWidth="135.0" text="Age" />
+                                          <TableColumn fx:id="D_weight" prefWidth="122.0" text="Weight" />
+                                          <TableColumn fx:id="D_health" prefWidth="160.0" text="Health disorder" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Requests for blood">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutX="60.0" layoutY="60.0" prefHeight="361.0" prefViewportHeight="570.0" prefViewportWidth="1141.0" prefWidth="1093.0">
+                                 <content>
+                                    <TableView fx:id="Acceptor_Table" layoutX="60.0" layoutY="60.0" prefHeight="364.0" prefWidth="1083.0">
+                                      <columns>
+                                        <TableColumn fx:id="A_Name" prefWidth="90.0" text="Name" />
+                                          <TableColumn fx:id="A_phone" prefWidth="92.0" text="Phone" />
+                                          <TableColumn fx:id="A_blood" prefWidth="103.0" text="Blood Group" />
+                                          <TableColumn fx:id="A_address" prefWidth="107.0" text="Address" />
+                                          <TableColumn fx:id="A_gender" prefWidth="104.0" text="Gender" />
+                                          <TableColumn fx:id="A_age" prefWidth="118.0" text="Age" />
+                                          <TableColumn fx:id="A_diagnosis" prefWidth="167.0" text="Diagnosis" />
+                                          <TableColumn fx:id="A_hospital" prefWidth="301.0" text="Referring hospital" />
+                                      </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" />
+               </padding>
+            </TabPane>
+            <ImageView fitHeight="318.0" fitWidth="1243.0" layoutX="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../images/—Pngtree—geometric%20gradient%20blood%20donation%20charity_1019952.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-4.0" prefHeight="1200.0" prefWidth="359.0" style="-fx-background-color: #c40001;">
+         <children>
+            <Label layoutX="77.0" layoutY="433.0" prefHeight="88.0" prefWidth="244.0" text="ADMIN" textAlignment="CENTER" textFill="WHITE" underline="true" wrapText="true">
+               <font>
+                  <Font name="Times New Roman Bold" size="52.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="503.0" prefHeight="134.0" prefWidth="190.0" text="MR. MUNSIF RAZA MS. FARWAH SHAIKH MS. SABA SAEED" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="221.0" fitWidth="229.0" layoutX="64.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/team.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="AdminLogout" layoutX="76.0" layoutY="650.0" mnemonicParsing="false" onAction="#AdminLogout" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: white;" text="LOGOUT">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startY="0.14285714285714285">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#c32148" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
